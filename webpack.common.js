@@ -23,6 +23,10 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        babelrc: false,
+                        configFile: path.resolve(__dirname, 'babel.config.js'),
+                    }
                 }
             },
             {
